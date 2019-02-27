@@ -23,4 +23,11 @@ csv()
     })
 })
 
+app.get('/cityGeoCode', (req, res) => {
+
+        res.send("App Working!")
+  
+    
+})
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
