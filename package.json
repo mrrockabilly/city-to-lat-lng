@@ -1,0 +1,29 @@
+{
+  "name": "city-to-lat-lng",
+  "version": "1.0.0",
+  "description": "An API that accepts a city name and returns lat and lng coordinates.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrrockabilly/city-to-lat-lng.git"
+  },
+  "keywords": [
+    "api",
+    "geocoding",
+    "geography"
+  ],
+  "author": "Jason Rubalcaba",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrrockabilly/city-to-lat-lng/issues"
+  },
+  "homepage": "https://github.com/mrrockabilly/city-to-lat-lng#readme",
+  "dependencies": {
+    "csvtojson": "^2.0.8",
+    "express": "^4.16.4"
+  }
+}
