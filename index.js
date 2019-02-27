@@ -22,7 +22,7 @@ csv()
     })
 })
 
-app.get('/cityGeoCode', (req, res) => {
+app.get('/', (req, res) => {
 
         res.send("App Working!")
   
