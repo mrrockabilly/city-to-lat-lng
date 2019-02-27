@@ -1,6 +1,5 @@
 const express = require('express')
 const app = express()
-const port = 3000
 const csvFilePath='uscitiesv1.4.csv'
 const csv=require('csvtojson')
 
@@ -30,4 +29,4 @@ app.get('/cityGeoCode', (req, res) => {
     
 })
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(process.env.PORT || 3000, () => console.log(`Example app listening on port ${port}!`))
