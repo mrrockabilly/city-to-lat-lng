@@ -30,6 +30,6 @@ app.get('/', (req, res) => {
     
 })
 
-server.listen(port, function() {
+app.listen(port, function() {
     console.log("App is running on port " + port);
 });
