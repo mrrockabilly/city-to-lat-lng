@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const csvFilePath='uscitiesv1.4.csv'
 const csv=require('csvtojson')
+var port = process.env.PORT || 8000;
 
 csv()
 .fromFile(csvFilePath)
@@ -29,4 +30,6 @@ app.get('/', (req, res) => {
     
 })
 
-app.listen(process.env.PORT || 3000, () => console.log(`Example app listening on port ${port}!`))
+server.listen(port, function() {
+    console.log("App is running on port " + port);
+});
