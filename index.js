@@ -3,6 +3,8 @@ const app = express()
 const csvFilePath='uscitiesv1.4.csv'
 const csv=require('csvtojson')
 var port = process.env.PORT || 8000;
+var path = require('path');
+
 
 csv()
 .fromFile(csvFilePath)
@@ -10,24 +12,25 @@ csv()
     app.get('/cityGeoCode', (req, res) => {
         let city = req.query.city;
         let state = req.query.state;
-        console.log(req.query)
         var found = cityData.find(function(element) {
             return element.city === city && element.state_id === state;
           });
         if(found){
-            res.send(found)
+            res.setHeader('Content-Type', 'application/json');
+            res.send(JSON.stringify(found))
         } else {
-            res.send("Data not found.")
+            res.send("City not in database!")
         }
         
     })
 })
 
-app.get('/', (req, res) => {
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/index.html'));
+});
 
-        res.send("App Working!")
-  
-    
+app.get('/tryNow', (req, res) => {
+    res.send("tryNow")
 })
 
 app.listen(port, function() {
