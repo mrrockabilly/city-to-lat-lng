@@ -5,6 +5,11 @@ const csv=require('csvtojson')
 var port = process.env.PORT || 8000;
 var path = require('path');
 
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
 
 csv()
 .fromFile(csvFilePath)
@@ -28,10 +33,6 @@ csv()
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
-
-app.get('/tryNow', (req, res) => {
-    res.send("tryNow")
-})
 
 app.listen(port, function() {
     console.log("App is running on port " + port);
