@@ -1,78 +1,142 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Geocode API</title>
-    <style>
-        .jumbotron {
-            background-image: url(https://wallpapercave.com/wp/vB98yyh.jpg);
-            background-size: cover;
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" type="image/png" href="img/compass.png" />
+  <title>City to Lat & Lng</title>
 
-        }
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-        h1 {
-            color: white;
-            text-align: center;
-            font-family: 'Goudy Bookletter 1911', serif;
-        }
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
+    rel="stylesheet">
 
-        h2,
-        p {
-            text-align: center;
-        }
-    </style>
+  <!-- Custom styles for this template -->
+  <link href="css/one-page-wonder.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css" />
+  <link href="css/custom.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <div class="container">
-        <div class="jumbotron">
-            <h1 class="display-4">Geocode API</h1>
-        </div>
-        <div class="row">
-            <div class="col">
-                <h2>About</h2>
-                <p>This API accepts a city and state. It will return a JSON file containing the Latitude and Longitude
-                    coordinates.
-                    It is built with Node/Express and deployed on Heroku. Visit us on GitHub:
-                    <a href="https://github.com/mrrockabilly/city-to-lat-lng">city-to-lat-lng</a>
-                </p>
-                <h2>Usage</h2>
-                <p><b>URL Example: </b>https://mrrockabilly.herokuapp.com/cityGeoCode/?city=Redding&state=CA</p>
-            </div>
-            <div class="col">
-                <h2>Try It Now!</h2>
-                <form action="/cityGeoCode" method="get">
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">City</label>
-                        <input type="text" name="city" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Los Angeles">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">State</label>
-                        <input type="text" class="form-control" name="state" placeholder="CA">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-            </div>
-        </div>
+
+
+
+  <header class="masthead text-center text-white">
+    <div class="masthead-content">
+      <div class="container">
+        <h1 class="masthead-heading mb-0">City to Lat & Lng</h1>
+        <h2 class="masthead-subheading mb-0">A free and easy to use API.</h2>
+        <a href="#about" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a>
+      </div>
     </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <div class="bg-circle-1 bg-circle"></div>
+    <div class="bg-circle-2 bg-circle"></div>
+    <div class="bg-circle-3 bg-circle"></div>
+    <div class="bg-circle-4 bg-circle"></div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="p-5">
+            <img class="img-fluid rounded-circle"
+              src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Mo_rivers2.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="p-5">
+            <h2 class="display-4">About</h2>
+            <p>This API accepts a city and state and will return a JSON file containing the Latitude and Longitude
+              coordinates.</p>
+              <p>It is built with Node/Express and deployed on Heroku. <br>Visit us on GitHub:
+              <a href="https://github.com/mrrockabilly/city-to-lat-lng">city-to-lat-lng</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="p-5">
+            <img class="img-fluid rounded-circle" src="https://c1.staticflickr.com/9/8499/8261596972_229f6cc2de_b.jpg"
+              alt="">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="p-5">
+            <h2 class="display-4">Try It Now!</h2>
+            <form action="/cityGeoCode" method="get">
+              <div class="form-group">
+                <label for="exampleInputEmail1">City</label>
+                <input type="text" name="city" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                  placeholder="Los Angeles">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">State</label>
+                <input type="text" class="form-control" name="state" placeholder="CA">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="p-5">
+            <img class="img-fluid rounded-circle"
+              src="https://upload.wikimedia.org/wikipedia/commons/5/59/ParthenonRecon06185.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="p-5">
+            <h2 class="display-4">Usage</h2>
+            <pre><code class="language-js">
+$.getJSON( "https://mrrockabilly.herokuapp.com/cityGeoCode?city=Los+Angeles&state=CA")
+  .done(function( json ) {
+    console.log(json);
+  })
+  .fail(function( jqxhr, textStatus, error ) {
+    var err = textStatus + ", " + error;
+    console.log( "Request Failed: " + err );
+});
+</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-black">
+    <div class="container">
+      <p class="m-0 text-center text-white small">Copyright &copy; Your Website 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js"
+    integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
 </body>
 
 </html>
