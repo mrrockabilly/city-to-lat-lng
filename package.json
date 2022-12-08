@@ -25,7 +25,7 @@
   "dependencies": {
     "ajax-request": "^1.2.3",
     "csvtojson": "^2.0.8",
-    "express": "^4.16.4",
+    "express": "^4.18.2",
     "mongoose": "^5.5.15"
   }
 }
